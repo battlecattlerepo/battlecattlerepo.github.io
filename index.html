@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:50,200,400,900" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <title>A2H Project</title>
+    <style>
+
+        *{
+            --dg: #181818;
+        }
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+
+        div.topnav {
+            background-color: var(--dg);
+            position: fixed;
+            width: 100vw;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .tpnv-element {
+            font-family: 'Montserrat', serif;
+            font-weight: 200;
+            padding: 0.25em;
+            padding-right: 0.5em;
+            padding-left: 0.5em;
+            color:white;
+        }
+
+        div.sec1 {
+            height: 100vh;
+            width: 100%;
+        }
+
+        h2#A2H {
+            margin-left: 2em;
+            margin-right: auto;
+        }
+
+        h2#by {
+            margin-right: 2em;
+            font-size: 20px;
+        }
+
+        h1#title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 45vh;
+            font-family: 'Montserrat', serif;
+            font-weight: 900;
+            font-size: 190px;
+            white-space: nowrap;
+            background-image: url('https://wallpaperaccess.com/full/486562.jpg');
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            color: transparent;
+            padding: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        div.cover-image {
+            filter: brightness(60%);
+            height: 100vh;
+            width: 100%;
+            z-index: -1;
+            position: fixed;
+            background-color: var(--dg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        svg#wave1 {
+            display: block;
+        }
+
+        path#wave1-path {
+            animation: wave linear infinite alternate;
+            animation-duration: 50s;
+        }
+
+        @keyframes wave {
+            0% {
+                d: path("M0,192L34.3,197.3C68.6,203,137,213,206,213.3C274.3,213,343,203,411,192C480,181,549,171,617,181.3C685.7,192,754,224,823,245.3C891.4,267,960,277,1029,272C1097.1,267,1166,245,1234,240C1302.9,235,1371,245,1406,250.7L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z");
+            }
+
+            50% {
+                d: path("M0,96L34.3,133.3C68.6,171,137,245,206,245.3C274.3,245,343,171,411,165.3C480,160,549,224,617,213.3C685.7,203,754,117,823,101.3C891.4,85,960,139,1029,186.7C1097.1,235,1166,277,1234,266.7C1302.9,256,1371,192,1406,160L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z");
+            }
+
+            100% {
+                d: path("M0,192L34.3,170.7C68.6,149,137,107,206,117.3C274.3,128,343,192,411,181.3C480,171,549,85,617,80C685.7,75,754,149,823,154.7C891.4,160,960,96,1029,80C1097.1,64,1166,96,1234,112C1302.9,128,1371,128,1406,128L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z");
+            }
+        }
+
+        div.content {
+            background-color: var(--dg);
+        }
+
+        div.footer-flex{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        div.footer{
+            font-family: 'Montserrat';
+            font-weight: 200;
+            font-size: 20px;
+            color: white;
+        }
+        hr{
+            margin: 0px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        
+
+
+        /* d="M0,192L34.3,197.3C68.6,203,137,213,206,213.3C274.3,213,343,203,411,192C480,181,549,171,617,181.3C685.7,192,754,224,823,245.3C891.4,267,960,277,1029,272C1097.1,267,1166,245,1234,240C1302.9,235,1371,245,1406,250.7L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" */
+        /* d="M0,192L34.3,170.7C68.6,149,137,107,206,117.3C274.3,128,343,192,411,181.3C480,171,549,85,617,80C685.7,75,754,149,823,154.7C891.4,160,960,96,1029,80C1097.1,64,1166,96,1234,112C1302.9,128,1371,128,1406,128L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" */
+    </style>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <h2 class="tpnv-element" id="A2H">Cash Cow Studios</h2>
+        <h2 class="tpnv-element" id="by">Riley and Theo</h2>
+    </div>
+    <div class="sec1">
+        <h1 id="title">Battle Cattle</h1>
+        <div class="cover-image">
+
+        </div>
+    </div>
+    <svg id="wave1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path id="wave1-path" fill="var(--dg)" fill-opacity="1"
+            d="M0,192L34.3,170.7C68.6,149,137,107,206,117.3C274.3,128,343,192,411,181.3C480,171,549,85,617,80C685.7,75,754,149,823,154.7C891.4,160,960,96,1029,80C1097.1,64,1166,96,1234,112C1302.9,128,1371,128,1406,128L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+        </path>
+    </svg>
+    <div class="content">
+
+        <div class="footer">
+
+            <hr></hr>
+            <div class="footer-flex">
+                <p> Algebra 2 Honors </p>
+                <p> 2020</p>
+            </div>
+            
+        </div>
+    </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+        <script>
+            // let tl = gsap.timeline();
+            // tl.from(".cover-image", {
+            //     duration: 2,
+            //     filter: "brightness(1)"
+            // });
+            // tl.from(".topnav", {
+            //     duration: 2,
+            //     opacity: 0
+            // });
+            // tl.from("#title", {
+            //     duration: 2,
+            //     opacity: 0
+            // });
+        </script>
+</body>
+
+</html>
