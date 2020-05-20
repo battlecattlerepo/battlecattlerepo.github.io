@@ -8,10 +8,11 @@
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <title>A2H Project</title>
     <style>
-
-        *{
+        * {
+            font-family: 'Montserrat';
             --dg: #181818;
         }
+
         html,
         body {
             height: 100%;
@@ -30,12 +31,12 @@
         }
 
         .tpnv-element {
-            font-family: 'Montserrat', serif;
+
             font-weight: 200;
             padding: 0.25em;
             padding-right: 0.5em;
             padding-left: 0.5em;
-            color:white;
+            color: white;
         }
 
         div.sec1 {
@@ -58,13 +59,12 @@
             left: 50%;
             transform: translateX(-50%);
             margin-top: 45vh;
-            font-family: 'Montserrat', serif;
             font-weight: 900;
             font-size: 190px;
             white-space: nowrap;
-            background-image: url('https://wallpaperaccess.com/full/486562.jpg');
+            background-image: url('12.png');
             background-attachment: fixed;
-            background-position: center center;
+            background-position: center;
             background-repeat: no-repeat;
             -webkit-background-clip: text;
             color: transparent;
@@ -111,7 +111,42 @@
             background-color: var(--dg);
         }
 
-        div.footer-flex{
+        div.reviews {
+            width: 80%;
+            padding-top: 2em;
+            padding-bottom: 2em;
+            color: white;
+            text-align: center;
+            border-radius: 25px;
+            border: 1px solid white;
+            box-shadow: 10px 10px 10px black;
+        }
+
+        div.reviewsflex {
+            display: flex;
+            justify-content: center;
+            padding-bottom:  2em;
+        }
+
+        h3#review {
+            padding-right: 5em;
+            padding-left: 5em;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        div.images {
+            width: 80%;
+            padding-top: 2em;
+            padding-bottom: 2em;
+            color: white;
+            text-align: center;
+            border-radius: 25px;
+            border: 1px solid white;
+            box-shadow: 10px 10px 10px black;
+        }
+
+        div.footer-flex {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
@@ -119,21 +154,134 @@
             padding-right: 20px;
             padding-left: 20px;
         }
-        div.footer{
-            font-family: 'Montserrat';
+
+        div.footer {
             font-weight: 200;
             font-size: 20px;
             color: white;
         }
-        hr{
+
+        hr {
             margin: 0px;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
 
-        
 
+        * {
+            box-sizing: border-box
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: 0;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
 
         /* d="M0,192L34.3,197.3C68.6,203,137,213,206,213.3C274.3,213,343,203,411,192C480,181,549,171,617,181.3C685.7,192,754,224,823,245.3C891.4,267,960,277,1029,272C1097.1,267,1166,245,1234,240C1302.9,235,1371,245,1406,250.7L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" */
         /* d="M0,192L34.3,170.7C68.6,149,137,107,206,117.3C274.3,128,343,192,411,181.3C480,171,549,85,617,80C685.7,75,754,149,823,154.7C891.4,160,960,96,1029,80C1097.1,64,1166,96,1234,112C1302.9,128,1371,128,1406,128L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" */
@@ -143,7 +291,8 @@
 
 <body>
     <div class="topnav">
-        <h2 class="tpnv-element" id="A2H">Cash Cow Studios</h2>
+        <h2 class="tpnv-element" id="A2H">Cash Cow Studios </h2>
+        
         <h2 class="tpnv-element" id="by">Riley and Theo</h2>
     </div>
     <div class="sec1">
@@ -158,34 +307,156 @@
         </path>
     </svg>
     <div class="content">
+        <div class="reviewsflex">
+            <div class="reviews">
 
-        <div class="footer">
+                <h1 id="reviewstitle"> Reviews</h1>
+                <img src="https://i.ya-webdesign.com/images/five-stars-png-4.png"
+                    style="width:20%; transform: translateY(20px);"></img>
+                <h3 id="review">
+                    This is the next generation of gaming. Unbelievable graphics. The highspeed RTX and rich lightmap baking really paid off. Such a good price too!
+                </h3>
 
-            <hr></hr>
-            <div class="footer-flex">
-                <p> Algebra 2 Honors </p>
-                <p> 2020</p>
+                <h4 style="font-size: smaller; font-weight: lighter;"> ~ Probably Mr. Sea</h4>
+                <img src="https://i.ya-webdesign.com/images/five-stars-png-4.png"
+                    style="width:20%; transform: translateY(20px);"></img>
+                <h3 id="review">
+                    I thought I was looking at real life. I was immeadiatly transported back to the combat of WWII.
+                    Stunning sounds and animations. I'm on my 2nd day of non stop gameplay!
+                </h3>
+                <h4 style="font-size: smaller; font-weight: lighter;"> ~ Anonymous Playtester</h4>
+
             </div>
-            
+        </div>
+
+        <div class="reviewsflex">
+            <div class="images">
+                <h1 id="reviewstitle"> Images</h1>
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="3.png" style="width:100%">
+                    </div>
+
+                    
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="8.png" style="width:100%">
+
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="9.png" style="width:100%">
+
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="10.png" style="width:100%">
+
+                    </div>
+
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="13.png" style="width:100%">
+
+                    </div>
+
+                    <!-- Next and previous buttons -->
+
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                
+
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+
+            </div>
         </div>
     </div>
+                <div class="footer">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
-        <script>
-            // let tl = gsap.timeline();
-            // tl.from(".cover-image", {
-            //     duration: 2,
-            //     filter: "brightness(1)"
-            // });
-            // tl.from(".topnav", {
-            //     duration: 2,
-            //     opacity: 0
-            // });
-            // tl.from("#title", {
-            //     duration: 2,
-            //     opacity: 0
-            // });
-        </script>
+                    <hr>
+                    </hr>
+                    <div class="footer-flex">
+                        <p> Algorithms and the Internet </p>
+                        <p> 2020</p>
+                    </div>
+
+                </div>
+
+
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+                <script>
+                    // let tl = gsap.timeline();
+                    // tl.from(".cover-image", {
+                    //     duration: 2,
+                    //     filter: "brightness(1)"
+                    // });
+                    // tl.from(".topnav", {
+                    //     duration: 2,
+                    //     opacity: 0
+                    // });
+                    // tl.from("#title", {
+                    //     duration: 2,
+                    //     opacity: 0
+                    // });
+                </script>
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) {
+                            slideIndex = 1
+                        }
+                        if (n < 1) {
+                            slideIndex = slides.length
+                        }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+                </script>
 </body>
 
 </html>
